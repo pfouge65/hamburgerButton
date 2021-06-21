@@ -1,0 +1,167 @@
+@import url("https://fonts.google.com/css2?familly=Poppins:wght@200;400;600&display=swap");
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins";
+    margin: 0;
+    min-height: 100vh;
+    color: rebeccapurple;
+    transition: background 0.3s;
+
+}
+body.dark{
+    background: #1F1F1F;
+    color: white;
+    transition: background 0.3s;
+
+}
+
+button.btn{
+    background: #CDCDCD;
+    border: none;
+    color: rebeccapurple;
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    top: 20px;
+    right: 20px;
+    transform: translate(0);
+    transition: transform 0.1s;
+}
+button.btn.active{
+    transform: translateX(-66px) rotate(90deg);
+    transition: transform 0.1s;
+}
+button.btn.dark{
+    background: #313131;
+    color: white;
+    transition: background 0.3s;
+
+}
+nav{
+    background: #CDCDCD;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    transform: translateX(100%);
+    transition: transform 0.3s;
+}
+nav.active{
+    transform: translate(0);
+    transition: transform 0.3s;
+
+}
+nav.dark{
+    background: #313131;
+    transition: background 0.3s;
+}
+nav ul{
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+}
+nav ul li{
+    padding: 1rem 0;
+}
+.aHref{
+    margin: 0 1rem;
+    color: rebeccapurple;
+    text-decoration: none;
+    display: block;
+    width: 66px;
+    height: 30px;
+}
+.aHref:hover{
+    color: white;
+    background: #313131;
+}
+
+.buttonContainer{
+    width: 50px;
+    height: 29px;
+    border-radius: 30px;
+    background: darkgreen;
+    margin: AUTO;
+    border: 2px solid darkgray;
+}
+.buttonContainer.dark{
+    background: darkred;
+    border: 2px solid darkgrey;
+}
+button.toggle{
+    border: none;
+    border-radius: 25px;
+    width: 25px;
+    height: 25px;
+    background: rebeccapurple;
+    margin: 0;
+    margin-top: 0px;
+    margin-left: 0px;
+    transition: transform 0.3s;
+    border: 2px solid rgb(58, 58, 58);
+
+}
+button.toggle.dark{
+    transform: translateX(22px);
+    transition: transform 0.3s;
+    border: 2px solid rgb(49, 49, 49);
+    background: white;
+}
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    max-width: 1000px;
+    max-height: 752px;
+    justify-content: center;
+    align-items: center;
+}
+.carouselContainer{
+    display: flex;
+    height: 500px;
+    width: 600px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.carouselContainer img{
+    margin: 0;
+
+    animation: carousel 10s infinite;
+}
+#btnGoogle{
+    width: 100px;
+    height: 50px;
+}
+
+@keyframes carousel {
+    0% {
+        transform: translateX(0)
+    }30%{
+        transform: translateX(0);
+    }
+    33%{
+        transform: translateX(-600px);
+    }
+    63%{
+        transform: translateX(-600px);
+    }
+    66%{
+        transform: translateX(-1200px);
+    }
+    97%{
+        transform: translateX(-1200px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
